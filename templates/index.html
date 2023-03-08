@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h1>Pokemon Pokedex</h1>
+
+    {% if error_message %}
+        <p class="error">{{ error_message }}</p>
+    {% endif %}
+    <form method="POST" action="/pokemon">
+        <input type="text" name="pokemon_name" placeholder="Enter a Pokemon name or number...">
+        <button type="submit">Search</button>
+    </form>
+
+{% endblock %}
